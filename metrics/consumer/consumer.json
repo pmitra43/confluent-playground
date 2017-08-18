@@ -32,13 +32,33 @@
               "password": "${influxPwd}"
             }
           ],
+          "obj": "java.lang:type=OperatingSystem",
+          "attr": [
+            "FreePhysicalMemorySize",
+            "ProcessCpuLoad",
+            "SystemCpuLoad",
+            "SystemLoadAverage"
+          ],
+          "resultAlias": "os"
+        },
+        {
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory",
+              "url": "${influxUrl}",
+              "database": "${influxDb}",
+              "username": "${influxUser}",
+              "password": "${influxPwd}"
+            }
+          ],
           "obj": "kafka.consumer:type=consumer-fetch-manager-metrics,client-id=*",
           "attr": [
             "bytes-consumed-rate",
             "fetch-latency-avg",
-            "fetch-rate",
+            "fetch-rate", 
             "records-lag-max",
-            "records-per-request-avg"
+            "records-per-request-avg",
+            "records-consumed-rate"
           ],
           "resultAlias": "ConsumerMetrics"
         }
