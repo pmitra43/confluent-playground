@@ -125,6 +125,12 @@
                   "key": "attributeName",
                   "operator": "=",
                   "value": "HeapMemoryUsage"
+                },
+                {
+                  "condition": "AND",
+                  "key": "hostname",
+                  "operator": "=",
+                  "value": "kafka-node-1"
                 }
               ]
             },
@@ -173,6 +179,12 @@
                   "key": "attributeName",
                   "operator": "=",
                   "value": "NonHeapMemoryUsage"
+                },
+                {
+                  "condition": "AND",
+                  "key": "hostname",
+                  "operator": "=",
+                  "value": "kafka-node-1"
                 }
               ]
             },
@@ -210,13 +222,19 @@
                   },
                   {
                     "params": [
-                      "physical"
+                      "freePhysicalMemory"
                     ],
                     "type": "alias"
                   }
                 ]
               ],
-              "tags": []
+              "tags": [
+                {
+                  "key": "hostname",
+                  "operator": "=",
+                  "value": "kafka-node-1"
+                }
+              ]
             }
           ],
           "timeFrom": null,
@@ -364,7 +382,13 @@
                   }
                 ]
               ],
-              "tags": []
+              "tags": [
+                {
+                  "key": "hostname",
+                  "operator": "=",
+                  "value": "kafka-node-1"
+                }
+              ]
             }
           ],
           "timeFrom": null,
@@ -441,7 +465,7 @@
           "points": false,
           "renderer": "flot",
           "seriesOverrides": [],
-          "span": 4,
+          "span": 6,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -547,7 +571,7 @@
           "points": false,
           "renderer": "flot",
           "seriesOverrides": [],
-          "span": 4,
+          "span": 6,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -653,7 +677,7 @@
           "points": false,
           "renderer": "flot",
           "seriesOverrides": [],
-          "span": 4,
+          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -681,7 +705,7 @@
                 [
                   {
                     "params": [
-                      "Count"
+                      "OneMinuteRate"
                     ],
                     "type": "field"
                   },
@@ -717,7 +741,7 @@
                 [
                   {
                     "params": [
-                      "Count"
+                      "OneMinuteRate"
                     ],
                     "type": "field"
                   },
@@ -765,7 +789,7 @@
                 [
                   {
                     "params": [
-                      "Count"
+                      "OneMinuteRate"
                     ],
                     "type": "field"
                   },
@@ -883,7 +907,7 @@
                 [
                   {
                     "params": [
-                      "Count"
+                      "OneMinuteRate"
                     ],
                     "type": "field"
                   },
@@ -919,7 +943,7 @@
                 [
                   {
                     "params": [
-                      "Count"
+                      "OneMinuteRate"
                     ],
                     "type": "field"
                   },
@@ -967,7 +991,7 @@
                 [
                   {
                     "params": [
-                      "Count"
+                      "OneMinuteRate"
                     ],
                     "type": "field"
                   },
@@ -1085,7 +1109,7 @@
                 [
                   {
                     "params": [
-                      "Count"
+                      "OneMinuteRate"
                     ],
                     "type": "field"
                   },
@@ -1121,7 +1145,7 @@
                 [
                   {
                     "params": [
-                      "Count"
+                      "OneMinuteRate"
                     ],
                     "type": "field"
                   },
@@ -1169,7 +1193,7 @@
                 [
                   {
                     "params": [
-                      "Count"
+                      "OneMinuteRate"
                     ],
                     "type": "field"
                   },

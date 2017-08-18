@@ -34,10 +34,15 @@
           ],
           "obj": "java.lang:type=OperatingSystem",
           "attr": [
+            "CommittedVirtualMemorySize",
             "FreePhysicalMemorySize",
+            "getFreeSwapSpaceSize",
             "ProcessCpuLoad",
             "SystemCpuLoad",
+            "TotalPhysicalMemorySize",
+            "TotalSwapSpaceSize",
             "SystemLoadAverage"
+
           ],
           "resultAlias": "os"
         },
